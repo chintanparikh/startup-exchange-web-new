@@ -194,6 +194,20 @@ h2 {
 #press-grid img{
 	max-width: 300px;
 	max-height: 100px
+	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	/* ...and now for the proper property */
+  	transition:.5s;
+}
+
+#press-grid img:hover {
+	filter: none;
+    -webkit-filter: grayscale(0);
 }
 
 #mailing-list {
