@@ -1,6 +1,15 @@
 $(document).ready(function(){
 
   var $window = $(window);
+  
+	$(".team-member").hover(
+	function () {
+	  $(".team-member-details", this).stop(true,true).fadeIn();
+	},
+	function () {
+	  $(".team-member-details", this).stop(true,true).fadeOut();
+	}
+	);
 
   $window.scroll(function() {
     if ($window.scrollTop() > $window.height() * 0.06)
