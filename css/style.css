@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-family: "Open Sans", sans-serif
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	color: #ffffff;
+}
+
+section {
+	width: 60%;
+	padding: 3% 20%;
+	padding-bottom: 0;
+	min-height: 100%;
+	text-align: center;
+	padding-top: 5%;
+}
+
+
+#splash {
+	background: url("../img/startupsemester2.jpg") no-repeat center center fixed;
+	padding-top: 3%;
+}
+
+
+#logo {
+	height: 50px;
+	width: 50px;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+#splash ul {
+	list-style: none;
+}
+
+#splash ul li {
+	float: left;
+	line-height: 60px;
+	margin-right: 20px;
+	font-family: "stratum2";
+	text-transform: uppercase;
+}
+
+#splash ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	padding-bottom: 6px;
+}
+
+#splash ul li a:hover {
+	position: relative;
+	bottom: 2px;
+}
+
+#splash header {
+	width: 80%;
+	margin: 0 auto;
+	clear: both;
+	box-sizing: border-box;
+	padding-top: 20%;
+}
+
+#splash h1 {
+	font-family: "Montserrat";
+	font-size: 50px;
+	text-transform: uppercase;
+	border: 5px solid #ffffff;
+	padding: 10px 20px;
+	display: inline;
+}
+
+#splash .tagline {
+	font-size: 36px;
+	font-family: "stratum2";
+	font-weight: 100;
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+
+#splash .arrow {
+	display: block;
+	height: 18px;
+	width: 34px;
+	margin: 0 auto;
+	clear: both;
+	position: absolute;
+	bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+h2 {
+	font-family: "Montserrat";
+	font-size: 25px;
+	text-transform: uppercase;
+	border: 5px solid #ffffff;
+	padding: 10px 20px;
+	display: inline;	
+}
+
+.white-bg {
+	color: #000000;
+	background: #ffffff;
+}
+
+.white-bg h2 {
+	color: #000000;
+	border: 5px solid #000000;
+	margin-bottom: 30px;	
+}
+
+#mission dl {
+	margin-top: 40px;
+	text-align: left;
+}
+
+#mission article {
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+}
+
+#mission .word {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#mission .pronunciation {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#mission .part-of-speech {
+	margin-left: 15px;
+	margin-top: 7px;
+	font-style: italic;
+}
+
+#mission .definition {
+	margin-left: 15px;
+	margin-top: 7px;
+}
+
+#mission p {
+	margin-left: 0;
+	margin-top: 30px;
+	font-size: 20px;
+	line-height: 35px;
+	text-align: justify;
+}
+
+#what-we-do {
+	background: url("../img/bg.jpg") no-repeat center center fixed;
+}
+
+#press {
+	background: #ffffff;
+	min-height: 0;
+}
+
+#press-grid {
+	margin-top: 10%;
+	padding-bottom: 10%;
+}
+
+#press-grid img{
+	max-width: 300px;
+	max-height: 100px
+}
+
+#team {
+	background: url("../img/3ds.jpg") no-repeat center center fixed;
+
+}

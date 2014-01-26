@@ -1,0 +1,115 @@
+/* This CSS file is created for you to create or override any of the existing CSS styles used in this theme */
+
+#featured-slideshow { width: 640px; height: 428px; }
+
+#range-logo {
+    background-image:url(http://ran.ge/content/uploads/2009/11/logo-trimmed.png);
+    display:block;
+    height:100px;
+    text-indent:-9999px;
+    width:460px;
+
+/* single post */
+.featured-entry {
+height: 10px;
+top: -143px;
+}
+
+.posts-line .entry-comments { display: none; }
+
+.entry-comments{
+visibility:hidden;
+}
+
+a, input[type="submit"] {
+	-moz-transition: 300ms all ease;
+	-webkit-transition: 300ms all ease;
+	transition: 300ms all ease;
+}
+
+.social-nav a:hover {
+	background-color: #86C140;
+}
+.social-nav a.rss:hover {
+	background-color: #FF6600;
+}
+
+.social-nav a.facebook:hover {
+	background-color: #3B5998;
+}
+
+.social-nav a.gplus:hover {
+	background-color: #DD4B39;
+}
+
+a.download-button {
+	display: block;
+	width: 166px;
+	height: 54px;
+	margin: 22px auto 18px;
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+	background-color: #333;
+	background-image: url('http://www.thepioneer.gatech.edu/wp-content/uploads/2012/10/Download.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 140px;
+}
+
+a.download-button:hover {
+	background-color: #05AFF2;
+}
+
+.addthis_counter a {
+	-moz-transition: none;
+	-webkit-transition: none;
+	transition: none;
+}
+
+/* side-by-side bottom content widgets */
+#section-featured-posts-1, #section-featured-posts-2 {
+	float: left;
+	width: 50%;
+}
+
+#section-featured-posts-1 .posts-quick,
+#section-featured-posts-2 .posts-quick {
+	margin: 0 1em 0 0;
+}
+
+#section-featured-posts-1 .posts-quick li,
+#section-featured-posts-2 .posts-quick li {
+	
+}
+
+#section-featured-posts-1 .entry-thumbnail,
+#section-featured-posts-2 .entry-thumbnail {
+	width: 96%;
+	margin: 0 2% 2%;
+}
+
+#section-featured-posts-1 .entry-thumbnail img,
+#section-featured-posts-2 .entry-thumbnail img {
+	width: 295px;
+	height: 166px;
+}
+
+#section-featured-posts-1 .entry-title,
+#section-featured-posts-2 .entry-title {
+	clear: left;
+	margin-left: 2%;
+}
+
+#section-featured-posts-1 p,
+#section-featured-posts-2 p {
+	display: none;
+}
+
+#section-news-posts {
+	clear: both;
+}
+
+a.more-link:link, a.more-link:visited {
+	margin: 0;
+}
