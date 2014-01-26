@@ -195,7 +195,28 @@ h2 {
 	max-height: 100px
 }
 
+#mailing-list {
+	background: url("../img/3ds.jpg") no-repeat center center fixed;
+	min-height: 0;
+	padding-bottom: 5%;
+}
+#mailing-list form {
+	padding-top: 5%;
+}
+
 #team {
 	background: url("../img/3ds.jpg") no-repeat center center fixed;
+}
 
+#mailing-list .subscribe {
+	display: none;
+}
+
+#mce-EMAIL {
+	border: 0;
+	height: 60px;
+	width: 90%;
+	font-size: 25px;
+	padding: 0 10px;
+	outline: none;
 }
