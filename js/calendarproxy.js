@@ -1,9 +1,9 @@
 /*
-    CalendarParse jQuery plugin
+    CalendarProxy jQuery plugin
     MIT Licence - Charles Knight - 2014
 
     This grabs data from public Google Calendars' RSS feeds and returns the data as JSON.
-    Thanks to the wki.pe/Same_Origin_Policy I had to make a proxy to handle the requests,
+    Thanks to the http://wki.pe/Same_Origin_Policy I had to make a proxy to handle the requests,
     so it goes ahead and parses the data as well. See https://github.com/rabidaudio/js-calendar-proxy
     Give it the [XML] link from the calendar's settings menu, an optional object with the
     parameters below, and a callback function with a single argument (the data) which will
@@ -11,7 +11,7 @@
     has some useful natural language date format functions, which have been exposed as well.
     
     
-    $.CalendarParse.get_calendar(url, options, callback)
+    $.CalendarProxy.get_calendar(url, options, callback)
     
     options:
         start:      Date formatted with .toISOString() or "today" (defaults to today)
@@ -123,12 +123,11 @@
     
     $.CalendarProxy = module;
 }(jQuery));
-
-
 //END MODULE/////////////////////////////////////////////////////////////////////////
 
-var url = "https://www.google.com/calendar/feeds/orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com/public/full-noattendees";
 
+
+var url = "https://www.google.com/calendar/feeds/orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com/public/full-noattendees";
 
 function format(event){
         //console.log(event);
@@ -148,7 +147,6 @@ function format(event){
         '</div>'
         );
     }
-
 
 $(document).ready(function(){
     $('#loading').show();
