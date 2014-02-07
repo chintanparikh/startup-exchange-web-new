@@ -314,3 +314,8 @@ h2 {
         bottom: 0;
         left: 0;
 }
+
+/* Calendar */
+.cal-event{
+    margin-top: 50px;
+}
