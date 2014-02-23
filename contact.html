@@ -1,0 +1,79 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+<script>
+/* TODO
+    turn into module - inputs md5, jquery if necc. (put jquery stuff elsewhere)
+    obfuscate, minify
+    requirejs to get md5 and friends when needed
+*/
+function send_email(){
+    alert("send email");
+}
+
+
+var canvas;
+
+$(document).ready(function(){
+    canvas = document.getElementById('textCanvas');
+    $("#refresh_captcha").click(generateCaptcha);
+    $('#frm_submit').click(function(){
+        if(checkAnswer($('#captcha').val())){
+            console.log("yay");
+        }else{
+            console.log("boo");
+        }
+    });
+});
+
+function checkAnswer(guess){
+    var answer = canvas.getAttribute('answer');
+    if( !answer ) return false;
+    return CryptoJS.MD5(guess).toString() === answer;
+}
+
+function generateCaptcha() {
+    //http://springtricks.blogspot.in/2013/11/simple-captcha-using-java-script.html
+    var randomstring = '';
+    var chars = "0123456789ABCDEFGHIJKL!@#$%^&*()MNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+    var string_length = 5;
+
+    for (var i=0; i<string_length; i++) {
+        //var rnum = Math.floor(Math.random() * chars.length);
+        //randomstring += chars.substring(rnum,rnum+1);
+        randomstring += chars[Math.floor(Math.random() * chars.length)];
+    }
+    console.log(randomstring);
+    var tCtx = canvas.getContext('2d');
+    tCtx.font= "italic 24px \"Open Sans\", sans-serif";
+    tCtx.strokeStyle = "#000000";
+    tCtx.shadowBlur=15;
+    tCtx.shadowColor="black";
+    tCtx.lineWidth=1;
+    tCtx.textBaseline = "middle";
+    tCtx.clearRect(0,0,140,40);
+    var pos = 30;
+    for(var i=0; i<randomstring.length; i++){
+        tCtx.strokeText(randomstring[i],pos,20+Math.floor(Math.random() * 10)-5);
+        pos=pos+tCtx.measureText(randomstring[i]).width+1;
+    }
+    //Store answer as MD5Sum so hackers can't just read the answer
+    canvas.setAttribute('answer', CryptoJS.MD5(randomstring).toString());
+}
+</script>
+</head>
+<body>
+<form>
+<input type="text" name="subject" id="frm_subject"></br>
+<textarea name="content" id="frm_content"></textarea></br>
+<input type="button" name="submit" id="frm_submit" value="submit"></input>
+<div>
+    <canvas id='textCanvas' width=140 height=40></canvas>
+    <br/>
+    <input type="button" id="refresh_captcha" value="refresh"></input></br>
+    <input type="text" id="captcha"></input>
+</div>
+</form>
+</body>
+</html>
