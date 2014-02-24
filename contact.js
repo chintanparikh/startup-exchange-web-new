@@ -1,10 +1,3 @@
-<html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
-<script src="jquery.overlay.js"></script>
-<script src="captcha.js"></script>
-<script>
 /* TODO
     obfuscate, minify
     requirejs to get md5 and friends when needed
@@ -46,13 +39,3 @@ $(document).ready(function(){
         });
     });
 });
-</script>
-</head>
-<body>
-<form>
-<input type="text" name="subject" id="frm_subject"></br>
-<textarea name="content" id="frm_content"></textarea></br>
-<input type="button" name="submit" id="frm_submit" value="submit"></input>
-</form>
-</body>
-</html>
