@@ -38,9 +38,6 @@ function secure_contact(){
     });
 }
 
-function(){
-
-}
 
 $(document).ready(function(){
     $('#btn_contact_submit') //TODO this aint right

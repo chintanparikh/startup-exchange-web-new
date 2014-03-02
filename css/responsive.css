@@ -1,0 +1,60 @@
+/* #Media Queries
+================================================== */
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+    /* Overwrite nav */
+    #nav {
+        font-size: 12px;
+    }
+    #nav img{
+        width: 30px;
+        height: auto;
+        padding-top: 10px;
+    }
+    
+    #splash h1{
+        font-size: 33px;
+    }
+    
+    #splash .tagline{
+        width: auto;
+    }
+    
+    #splash header{
+        padding-top: 30%;
+        width: auto;
+    }
+    
+    .navtop{
+        /*margin-left: -33%;
+        margin-top: -2em;
+        padding-left: 1em;
+        position: fixed;*/
+        position: absolute;
+        top: 0;
+        /*width: 100%;*/
+        left: 0;
+        padding-left: 1em;
+        height: 60px;
+    }
+    
+    .navscroll{
+        padding-left: 1em;
+        width: 100%;
+    }
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/*@media only screen and (min-width: 768px) and (max-width: 959px) {}*/
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
