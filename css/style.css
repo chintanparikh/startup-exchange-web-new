@@ -227,7 +227,8 @@ h2 {
 	display: none;
 }
 
-#mce-EMAIL {
+/*#mce-EMAIL {*/
+.email-box {
 	border: 0;
 	height: 60px;
 	width: 90%;
@@ -318,4 +319,44 @@ h2 {
 /* Calendar */
 .cal-event{
     margin-top: 50px;
+}
+
+/* Contact */
+#contact {
+	background: url("../img/contact.jpg") no-repeat center center fixed;
+}
+
+#txt_contact_email {
+    margin-top: 50px;
+}
+
+#btn_contact_submit {
+    /*TODO */
+    /*position: absolute;
+    margin-left: 950px;
+    margin-top: -150px;*/
+    position: relative;
+    margin-left: 99%;
+    margin-top: -50px;
+    font-size: 30px;
+    opacity: 0.25;
+}
+
+#btn_contact_submit .arrow {
+    position: relative;
+    top: -42px;
+    left: 82px;
+    width: 25px;
+    height: auto;
+    opacity: 0.10;
+}
+.email-msg{
+    border: 0px;
+    height: 300px;
+    width: 90%;
+    font-size: 15px;
+    padding: 12px 10px;
+    outline: none;
+    margin-top: 40px;
+    resize: none;
 }
