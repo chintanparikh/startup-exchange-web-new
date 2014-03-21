@@ -7,10 +7,6 @@
 //https://www.iconfinder.com/icons/208024/audio_refresh_repeat_icon#size=128
 //https://www.iconfinder.com/icons/211619/a_arrow_right_icon#size=20
 
-function send_email(){
-    alert("send email");
-}
-
 $.fn.extend({
     onKeyEnter: function(callback){
         var cb = (typeof callback == 'function') ? callback : new Function(callback);
@@ -20,7 +16,7 @@ $.fn.extend({
     }
 });
 
-function secure_contact(){
+/*function secure_contact(){
     $.overlay.create(
         '<div>'+
             '<p>Please inter the following text in the block below for security purposes.<p>'+
@@ -57,7 +53,7 @@ function secure_contact(){
             $('#img_captcha').append( Captcha.generate() );
         }
     });
-}
+}*/
 
 
 $(document).ready(function(){

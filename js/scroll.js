@@ -4,7 +4,7 @@ $(document).ready(function(){
   function simple_slide(e){
     var dest = $(this).attr('href');
     var dest_pos = $(dest).offset().top;
-    var offset=0;
+    var offset= 0;//-1*($('.navscroll').height() || 0);
     var distance = dest_pos -  $(document).scrollTop();//down is positive
     console.log(distance);
     e.preventDefault();
