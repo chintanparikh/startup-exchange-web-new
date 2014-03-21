@@ -154,7 +154,7 @@ h2 {
 
 #press {
 	background: #ffffff;
-	min-height: 0;
+	min-height: 100%;
 }
 
 #press-grid {
@@ -183,11 +183,12 @@ h2 {
 
 #mailing-list {
 	background: url("../img/3ds.jpg") no-repeat center center fixed;
-	min-height: 0;
+	min-height: 100%;
 	padding-bottom: 5%;
 }
 #mailing-list form {
-	padding-top: 5%;
+	/*padding-top: 5%;*/
+	margin-top: 23%;
 }
 
 #team {
@@ -332,7 +333,7 @@ h2 {
   	width: 100%;
   	left: 0;
   	padding-left: 20%;
-  	height: 60px;
+  	/*height: 60px;*/
 }
 
 /* Calendar */
@@ -354,9 +355,9 @@ h2 {
     /*position: absolute;
     margin-left: 950px;
     margin-top: -150px;*/
-    position: relative;
+    /*position: relative;
     margin-left: 99%;
-    margin-top: -50px;
+    margin-top: -50px;*/
     font-size: 30px;
     opacity: 0.25;
     cursor: pointer;
@@ -369,6 +370,16 @@ h2 {
     width: 25px;
     height: auto;
     opacity: 0.10;
+}
+#txt_captcha{
+    width: 80%;
+    margin: 0px;
+    display: inline-block;
+}
+#refresh_captcha{
+    padding: 8px;
+    margin-left: 10px;
+    margin-bottom: 3px;
 }
 .email-msg{
     border: 0px;
