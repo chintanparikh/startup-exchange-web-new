@@ -32,20 +32,22 @@ $(document).ready(function(){
   );
 
   $window.scroll(function() {
-    if ($window.scrollTop() > $window.height() * 0.06){
-      //$("#nav").css({});
+    if ($window.scrollTop() > 80){ //$window.height() * 0.06){
       $('#nav').addClass('navscroll');
       $('#nav').removeClass('navtop');
-
-      $("#splash header").css({
-      	marginTop: "80px"
-      });	
     }
-    if ($window.scrollTop() < $window.height() * 0.06){
-		  //$("#nav").removeAttr("style");
+    if ($window.scrollTop() < 80){//$window.height() * 0.06){
 		  $("#nav").removeClass('navscroll');
 		  $('#nav').addClass('navtop');
-		  $("#splash header").removeAttr("style");
     }
   });
+  
+  /*$("#nav").mmenu({
+       // options object
+       //moveBackground: false,
+       
+    }, {
+       // configuration object
+       pageNodetype: "section"
+    });*/
 });
