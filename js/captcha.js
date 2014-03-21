@@ -12,7 +12,13 @@ var Captcha = (function(CryptoJS){
     function randInt(a, b){
         var start, end;
         if(b === undefined){ start=0; end=a; }else{ start=a; end=b; }
-        return Math.floor(Math.random() * (end-start))+start;
+        if(!window.crypto || !window.crypto.getRandomValues)
+            return Math.floor(Math.random() * (end-start))+start;
+        //otherwise use more secure window.crypto method
+        var buffer = new Uint32Array(1);
+        var r = window.crypto.getRandomValues(buffer)[0];
+        while(r>1) r=r/10;
+        return Math.floor(r*(end-start))+start;
     }
     
     var module={};

@@ -8,10 +8,13 @@ $(document).ready(function(){
     var distance = dest_pos -  $(document).scrollTop();//down is positive
     console.log(distance);
     e.preventDefault();
+    
     //$(document.documentElement).animate({
     $(document.body).animate({
         scrollTop: dest_pos + offset
-    }, Math.min(2000, Math.abs(distance)) );
+    }, Math.min(2000, Math.abs(distance)), function(){
+        window.location.hash = dest.substr(1);
+    });
   }
   
   if (!Modernizr.touch){

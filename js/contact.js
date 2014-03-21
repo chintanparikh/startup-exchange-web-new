@@ -5,6 +5,7 @@
 */
 
 //https://www.iconfinder.com/icons/208024/audio_refresh_repeat_icon#size=128
+//https://www.iconfinder.com/icons/211619/a_arrow_right_icon#size=20
 
 function send_email(){
     alert("send email");
@@ -24,10 +25,10 @@ function secure_contact(){
         '<div>'+
             '<p>Please inter the following text in the block below for security purposes.<p>'+
             '<span id="img_captcha"></span>'+
-            //'<input type="button" id="refresh_captcha" value="refresh"></input><br>'+
-            '<img id="refresh_captcha" src="img/refresh.png"></br>'+
             '<input type="text" id="txt_captcha"></input>'+
-        '</div>'
+            '<img id="refresh_captcha" src="img/refresh.png">'+
+        '</div>',
+        ["white-bg"]
     );
     $('#img_captcha').append( Captcha.generate() );
     $("#refresh_captcha").click(function(){
@@ -35,28 +36,41 @@ function secure_contact(){
     });
     $("#txt_captcha").onKeyEnter(function(){
         if(Captcha.check( $('#txt_captcha').val() )){
-            alert("yay");
+            $.ajax({
+                url: "#", //TODO post to mailform
+            }).done(function(){
+                $.overlay.destroy();
+            });
         }else{
-            alert("boo");
+            $('#txt_captcha')
+                .val("")
+                .animate({
+                    boxShadow: "0 0 8px rgb(255,0,0)", //requires jquery.animate-shadow
+                },100,function(){
+                    var txtbox = this;
+                    setTimeout(function(){
+                        $(txtbox).animate({
+                            boxShadow: "0 0 0px rgb(152,153,153)"
+                        },200);
+                    },2000);
+                });
+            $('#img_captcha').append( Captcha.generate() );
         }
     });
 }
 
 
 $(document).ready(function(){
-    $('#btn_contact_submit') //TODO this aint right
+    $('#btn_contact_submit')
         .mouseover(function(){
             $(this).animate({
                  opacity: 1,
-                 //left: "+=10"
             },150);
         })
          .mouseout(function(){
             $(this).animate({
                 opacity: 0.25,
-                //left: "-=10"
             },75);
         })
         .click(secure_contact);
-    //$('#txt_contact_message').onKeyEnter(secure_contact);
 });
