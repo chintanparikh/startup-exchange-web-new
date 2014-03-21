@@ -90,7 +90,7 @@
     module.pretty_date = function(d){
         var today = new Date();
         var one_day = 1000*60*60*24;
-        var diff = Math.ceil(d.getTime() - today.getTime())/one_day;
+        var diff = Math.ceil((d.getTime() - today.getTime())/one_day);
         if(diff==-1)                return "Yesterday at "+module.pretty_time(d);
         else if(diff==0)            return "Today at "+module.pretty_time(d);
         else if(diff==1)            return "Tomorrow at"+module.pretty_time(d);
@@ -152,6 +152,7 @@ $(document).ready(function(){
     $('#loading').show();
     $('#events').hide();
     $.CalendarProxy.get_calendar(url, {}, function(events){
+        console.log(events);
         events.forEach(function(e){
             $('#events').append( format(e) );
         });
