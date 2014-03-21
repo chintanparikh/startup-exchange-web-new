@@ -65,7 +65,7 @@
                 results = data;
             })
             .fail(function(xhr, textstatus, errorThrown){
-                console.log("Calendar request failed");
+                throw new Error("Calendar request failed - " + errorThrown);
                 results = errorThrown;
             })
             .always(function(){
@@ -134,7 +134,7 @@ function format(event){
         var when= new Date(event.start);
         return (
         '<div class="cal-event">'+
-            '<a href="'+event.html_link+'">'+
+            '<a href="'+event.html_link+'" target="_blank">'+
                 "<h3>"+(event.title || "Untitled")+"</h3>"+
             '</a>'+
             (event.where ? "Where: "+event.where+"<br>" : "")+
@@ -152,7 +152,6 @@ $(document).ready(function(){
     $('#loading').show();
     $('#events').hide();
     $.CalendarProxy.get_calendar(url, {}, function(events){
-        console.log(events);
         events.forEach(function(e){
             $('#events').append( format(e) );
         });

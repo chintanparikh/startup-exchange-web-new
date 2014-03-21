@@ -6,7 +6,6 @@ $(document).ready(function(){
     var dest_pos = $(dest).offset().top;
     var offset= 0;//-1*($('.navscroll').height() || 0);
     var distance = dest_pos -  $(document).scrollTop();//down is positive
-    console.log(distance);
     e.preventDefault();
     
     //$(document.documentElement).animate({
