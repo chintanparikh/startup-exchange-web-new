@@ -53,7 +53,7 @@ var Captcha = (function(CryptoJS){
         tCtx.lineWidth=1;
         tCtx.textBaseline = "middle";
         tCtx.clearRect(0,0,140,40);
-        var pos = 30;
+        var pos = 40;
         for(var i=0; i<randomstring.length; i++){
             tCtx.strokeText(randomstring[i],pos,20+randInt(-5,5));
             pos=pos+tCtx.measureText(randomstring[i]).width+1;

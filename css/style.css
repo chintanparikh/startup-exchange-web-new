@@ -13,7 +13,7 @@ html, body {
 }
 
 section {
-	width: 60%;
+	/*width: 60%;*/
 	padding: 3% 20%;
 	padding-bottom: 0;
 	min-height: 100%;
@@ -32,7 +32,7 @@ section {
 	height: 50px;
 	width: 50px;
 	margin: 0 auto;
-	margin-top: 5px;
+	/*margin-top: 5px;*/
 }
 
 
@@ -114,7 +114,7 @@ h2 {
 }
 
 #mission article {
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 	margin-bottom: 10%;
 }
@@ -228,7 +228,7 @@ h2 {
 
 .team-wrapper {
 		/*width: 660px;*/
-		width: 47%;
+		/*width: 47%;*/
 		margin: 0 auto;
         margin-top: 10%;
         overflow: hidden;
@@ -293,10 +293,11 @@ h2 {
 #nav {
 	list-style: none;
 	z-index: 999;
+	margin: auto;
 }
 #nav li {
 	float: left;
-	line-height: 60px;
+	line-height: 72px;
 	margin-right: 20px;
 	font-family: "stratum2";
 	text-transform: uppercase;
@@ -358,6 +359,7 @@ h2 {
     margin-top: -50px;
     font-size: 30px;
     opacity: 0.25;
+    cursor: pointer;
 }
 
 #btn_contact_submit .arrow {
@@ -371,7 +373,6 @@ h2 {
 .email-msg{
     border: 0px;
     height: 300px;
-    width: 90%;
     font-size: 15px;
     padding: 12px 10px;
     outline: none;

@@ -3,6 +3,9 @@
     requirejs to get md5 and friends when needed
     set timeout on calendar
 */
+
+//https://www.iconfinder.com/icons/208024/audio_refresh_repeat_icon#size=128
+
 function send_email(){
     alert("send email");
 }
@@ -21,7 +24,8 @@ function secure_contact(){
         '<div>'+
             '<p>Please inter the following text in the block below for security purposes.<p>'+
             '<span id="img_captcha"></span>'+
-            '<input type="button" id="refresh_captcha" value="refresh"></input><br>'+
+            //'<input type="button" id="refresh_captcha" value="refresh"></input><br>'+
+            '<img id="refresh_captcha" src="img/refresh.png"></br>'+
             '<input type="text" id="txt_captcha"></input>'+
         '</div>'
     );
@@ -42,22 +46,16 @@ function secure_contact(){
 $(document).ready(function(){
     $('#btn_contact_submit') //TODO this aint right
         .mouseover(function(){
-            $(this).off('mouseover');
             $(this).animate({
                  opacity: 1,
-                 left: "+=10"
-            },250, function(){
-                $(this).on('mouseover');
-            });
+                 //left: "+=10"
+            },150);
         })
          .mouseout(function(){
-            $(this).off('mouseout');
             $(this).animate({
                 opacity: 0.25,
-                left: "-=10"
-            },150, function(){
-                $(this).on('mouseout');
-            });
+                //left: "-=10"
+            },75);
         })
         .click(secure_contact);
     //$('#txt_contact_message').onKeyEnter(secure_contact);

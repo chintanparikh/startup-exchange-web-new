@@ -1,3 +1,4 @@
+//http://www.thepetedesign.com/demos/onepage_scroll_demo.html
 $(document).ready(function(){
   
   function simple_slide(e){
@@ -7,7 +8,8 @@ $(document).ready(function(){
     var distance = dest_pos -  $(document).scrollTop();//down is positive
     console.log(distance);
     e.preventDefault();
-    $(document.documentElement).animate({
+    //$(document.documentElement).animate({
+    $(document.body).animate({
         scrollTop: dest_pos + offset
     }, Math.min(2000, Math.abs(distance)) );
   }
