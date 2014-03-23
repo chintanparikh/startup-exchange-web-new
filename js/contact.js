@@ -17,7 +17,7 @@ $.fn.extend({
 });
 
 function secure_contact(){
-    $.overlay.create(
+/*    $.overlay.create(
         '<div>'+
             '<p>Please inter the following text in the block below for security purposes.<p>'+
             '<span id="img-captcha"></span>'+
@@ -52,8 +52,8 @@ function secure_contact(){
                 });
             $('#img-captcha').append( Captcha.generate() );
         }
-    });
-}*/
+    });*/
+}
 
 
 $(document).ready(function(){
