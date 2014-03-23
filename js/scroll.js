@@ -19,59 +19,27 @@ $(document).ready(function(){
   
   
     //scrolling links
-    $(document.body).find('a[href^="#"]:not([href="#nav"])').click(simple_slide);
-  
-    function _init(){
-        var width = $window.width();
-        console.log(width);
-        if(width<=767){
-            _init_mobile();
-        }else{
-            _init_desktop();
+    //if(!Modernizr.touch){
+        $(document.body).find('a[href^="#"]:not([href="#nav"])').click(simple_slide);
+    //}
+    
+    $nav.mmenu({
+        onClick:{
+            close: true,
+            preventDefault: true,
+            setSelected: false,
         }
-    }
-
-    function _init_mobile(){
-        $nav.removeClass();
-        $window.off('scroll');
-        $nav.mmenu({
-            //moveBackground: false,
-            onClick:{
-                close: false, //true,
-                preventDefault: true,
-                setSelected: false,
-            }
-        }, {
-           pageNodetype: "page"
-        });
-    }
-
-    function _init_desktop(){
-    $('nav [class*="mm-"]').each(function(){
-        $(this).removeClass(function(index, classes){
-            var list = classes.split(" ");
-            var remove = [];
-            var c;
-            while(c=list.pop()){
-                if(c.match(/^mm-/))
-                    remove.push(c);
-            }
-            return remove.join(" ");
-        });
+    }, {
+       pageNodetype: "page"
     });
-        $window.scroll(function() {
-            if ($window.scrollTop() > $window.height() * 0.088){
-                $nav.addClass('navscroll').removeClass('navtop');
-            }
-            if ($window.scrollTop() < $window.height() * 0.088){
-                $nav.removeClass('navscroll').addClass('navtop');
-            }
-        });
-        $nav.removeClass().addClass('nav navtop');
-    }
-
-    _init();
-    $window.resize(_init);
+    $window.scroll(function() {
+        if ($window.scrollTop() > $window.height() * 0.088){
+            $nav.addClass('navscroll').removeClass('navtop');
+        }else{
+            $nav.removeClass('navscroll').addClass('navtop');
+        }
+    });
+    $window.scroll();
 
 /****************************************************
     Setting the currently selected item in the menu. Needs some work.
@@ -107,20 +75,17 @@ $(document).ready(function(){
 
 function simple_slide(e){
     e.preventDefault();
-    var that=this;
-    //setTimeout(function(that){
-        var dest = $(that).attr('href');
-        if(dest==="#nav") return;
-        var dest_pos = $(dest).offset().top;
-        var offset = 0;
-        var distance = dest_pos -  $(document).scrollTop();//down is positive
-        
-        $(document.body).animate({
-            scrollTop: dest_pos + offset
-        }, Math.min(scroll_max_animaton_time, Math.abs(distance)), function(){
-            var p=$(document).scrollTop();
-            window.location.hash = dest;
-            $("#nav").trigger('close');
-        });
-    //},400,that);
+    var dest = $(this).attr('href');
+    if(dest==="#nav") return;
+    var dest_pos = $(dest).offset().top;
+    var offset = 0;
+    var distance = dest_pos -  $(document).scrollTop();//down is positive
+    
+    $(document.body).animate({
+        scrollTop: dest_pos + offset
+    }, Math.min(scroll_max_animaton_time, Math.abs(distance)), function(){
+        var p=$(document).scrollTop();
+        window.location.hash = dest;
+        $("#nav").trigger('close');
+    });
 }

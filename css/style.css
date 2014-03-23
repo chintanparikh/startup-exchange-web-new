@@ -10,12 +10,11 @@ html, body {
 	width: 100%;
 	height: 100%;
 	color: #ffffff;
-	/*overflow-x: hidden;*/
 	position: relative;
 }
 html{
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 section {
@@ -44,12 +43,10 @@ section {
 	height: 50px;
 	width: 50px;
 	margin: 0 auto;
-	/*margin-top: 5px;*/
 }
 
 
 #splash header {
-	/*width: 80%;*/
 	margin: 0 auto;
 	clear: both;
 	box-sizing: border-box;
@@ -70,7 +67,6 @@ section {
 	font-size: 36px;
 	font-family: "stratum2";
 	font-weight: 100;
-	/*width: 600px;*/
 	width: 43%;
 	margin: 0 auto;
 	padding-top: 30px;
@@ -243,8 +239,6 @@ h2 {
 
 
 .team-wrapper {
-		/*width: 660px;*/
-		/*width: 47%;*/
 		margin: 0 auto;
         margin-top: 10%;
         overflow: hidden;
@@ -304,61 +298,6 @@ h2 {
         left: 0;
 }
 
-/* Fullscreen Nav */
-
-.nav {
-	z-index: 999;
-	width: 100%;
-	text-align: center;
-}
-.nav ul{
-    list-style: none;
-    position: relative;
-    display: inline-block;
-    margin: 0;
-}
-.nav li {
-	float: left;
-	line-height: 72px;
-	margin-right: 20px;
-	font-family: "stratum2";
-	text-transform: uppercase;
-}
-
-
-.nav li a {
-	color: #ffffff;
-	text-decoration: none;
-	padding-bottom: 6px;
-}
-
-.nav li.social a {
-	font-family: "Socialico";
-	text-transform: none;
-	font-size: 20px;
-	line-height: 65px
-}
-
-.nav li a:hover {
-	position: relative;
-	bottom: 2px;
-}
-
-.navtop{
-    padding-top: 5%;
-    position: absolute;
-}
-
-.navscroll {
-  	background: rgba(0, 0, 0, 1);
-  	top: 0;
-  	left: 0;
-  	position: fixed;
-  	/*padding-left: 20%;*/
-  	height: 9%;
-  	min-height:72px;
-}
-
 /* Calendar */
 .cal-event{
     margin-top: 50px;
@@ -369,18 +308,11 @@ h2 {
 	background: url("../img/contact.jpg") no-repeat center center fixed;
 }
 
-#txt_contact_email {
+#contact-email {
     margin-top: 50px;
 }
 
-#btn_contact_submit {
-    /*TODO */
-    /*position: absolute;
-    margin-left: 950px;
-    margin-top: -150px;*/
-    /*position: relative;
-    margin-left: 99%;
-    margin-top: -50px;*/
+#contact-submit {
     font-size: 30px;
     opacity: 0.25;
     cursor: pointer;
@@ -421,8 +353,8 @@ h2 {
     border-width: 1px;
     border-style: solid;
     position: fixed;
-    width:90px;
-    height:90px;
+    width:60px;
+    height:60px;
     z-index:5;
 }
 #logo{
@@ -430,7 +362,7 @@ h2 {
     z-index:99;
 }
 #logo img{
-    margin: 20px;
+    margin: 15px;
 }
 
 .no-mobile{

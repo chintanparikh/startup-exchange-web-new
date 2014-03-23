@@ -16,21 +16,21 @@ $.fn.extend({
     }
 });
 
-/*function secure_contact(){
+function secure_contact(){
     $.overlay.create(
         '<div>'+
             '<p>Please inter the following text in the block below for security purposes.<p>'+
-            '<span id="img_captcha"></span>'+
-            '<input type="text" id="txt_captcha"></input>'+
-            '<img id="refresh_captcha" src="img/refresh.png">'+
+            '<span id="img-captcha"></span>'+
+            '<input type="text" id="txt-captcha"></input>'+
+            '<img id="refresh-captcha" src="img/refresh.png">'+
         '</div>',
         ["white-bg"]
     );
-    $('#img_captcha').append( Captcha.generate() );
-    $("#refresh_captcha").click(function(){
-        $('#img_captcha').append( Captcha.generate() );
+    $('#img-captcha').append( Captcha.generate() );
+    $("#refresh-captcha").click(function(){
+        $('#img-captcha').append( Captcha.generate() );
     });
-    $("#txt_captcha").onKeyEnter(function(){
+    $("#txt-captcha").onKeyEnter(function(){
         if(Captcha.check( $('#txt_captcha').val() )){
             $.ajax({
                 url: "#", //TODO post to mailform
@@ -38,7 +38,7 @@ $.fn.extend({
                 $.overlay.destroy();
             });
         }else{
-            $('#txt_captcha')
+            $('#txt-captcha')
                 .val("")
                 .animate({
                     boxShadow: "0 0 8px rgb(255,0,0)", //requires jquery.animate-shadow
@@ -50,14 +50,14 @@ $.fn.extend({
                         },200);
                     },2000);
                 });
-            $('#img_captcha').append( Captcha.generate() );
+            $('#img-captcha').append( Captcha.generate() );
         }
     });
 }*/
 
 
 $(document).ready(function(){
-    $('#btn_contact_submit')
+    $('#contact-submit')
         .mouseover(function(){
             $(this).animate({
                  opacity: 1,

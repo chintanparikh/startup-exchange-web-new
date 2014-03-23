@@ -1,6 +1,64 @@
 /* #Media Queries
 ================================================== */
 
+/* Full-blown desktops*/
+@media only screen and (min-width:959px){
+    /* Fullscreen Nav */
+
+    .nav {
+	    z-index: 999;
+	    width: 100%;
+	    text-align: center;
+    }
+    .nav ul{
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
+    .nav li {
+	    float: left;
+	    line-height: 72px;
+	    margin-right: 20px;
+	    font-family: "stratum2";
+	    text-transform: uppercase;
+    }
+
+
+    .nav li a {
+	    color: #ffffff;
+	    text-decoration: none;
+	    padding-bottom: 6px;
+    }
+
+    .nav li.social a {
+	    font-family: "Socialico";
+	    text-transform: none;
+	    font-size: 20px;
+	    line-height: 65px
+    }
+
+    .nav li a:hover {
+	    position: relative;
+	    bottom: 2px;
+    }
+
+    .navtop{
+        padding-top: 5%;
+        position: absolute;
+    }
+
+    .navscroll {
+      	background: rgba(0, 0, 0, 1);
+      	top: 0;
+      	left: 0;
+      	position: fixed;
+      	/*padding-left: 20%;*/
+      	height: 9%;
+      	min-height:72px;
+    }
+}
+
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
@@ -68,4 +126,11 @@
     .mobile-only{
         display: block !important;
     }
+    
+    .logo {
+	    height: 30px;
+	    width: 30px;
+	    margin: 0 auto;
+    }
+
 }
