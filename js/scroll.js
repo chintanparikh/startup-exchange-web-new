@@ -4,67 +4,76 @@ var section_positions=[];
 var scroll_max_animaton_time=2000;
 
 $(document).ready(function(){
-  
-  function simple_slide(e){
-    e.preventDefault();
-    var that=this;
-    //setTimeout(function(that){
-        var dest = $(that).attr('href');
-        if(dest==="#nav") return;
-        var dest_pos = $(dest).offset().top;
-        var offset = 0;//-1*($('.navscroll').height() || 0); //pixels down screen
-        var distance = dest_pos -  $(document).scrollTop();//down is positive
-        
-        //$(document.documentElement).animate({
-        $(document.body).animate({
-            scrollTop: dest_pos + offset
-        }, Math.min(scroll_max_animaton_time, Math.abs(distance)), function(){
-            var p=$(document).scrollTop();
-            window.location.hash = dest;
-            $("#nav").trigger('close');
-        });
-    //},400,that);
-  }
 
-  var $window = $(window);
+    var $window = $(window);
+    var $nav = $("#nav");
   
-  $(".team-member").hover(
-      function () {
-        $(".team-member-details", this).stop(true,true).fadeIn();
-      },
-      function () {
-        $(".team-member-details", this).stop(true,true).fadeOut();
-      }
-  );
-
-  /*$window.scroll(function() {
-    if ($window.scrollTop() > 80){ //$window.height() * 0.06){
-      $('#nav').addClass('navscroll');
-      $('#nav').removeClass('navtop');
-    }
-    if ($window.scrollTop() < 80){//$window.height() * 0.06){
-		  $("#nav").removeClass('navscroll');
-		  $('#nav').addClass('navtop');
-    }
-  });*/
-  //$('#nav').removeClass('navtop').removeClass('nav');
-  
-
-  
-    $("#nav").mmenu({
-        //moveBackground: false,
-        onClick:{
-            close: false,//true,
-            preventDefault: true,
-            setSelected: false,
+    $(".team-member").hover(
+        function () {
+            $(".team-member-details", this).stop(true,true).fadeIn();
+        },
+        function () {
+            $(".team-member-details", this).stop(true,true).fadeOut();
         }
-    }, {
-       pageNodetype: "page"
-    });
-    
-  $(document.body).find('a[href^="#"]:not([href="#nav"])').click(simple_slide);
+    );
   
-  /*
+  
+    //scrolling links
+    $(document.body).find('a[href^="#"]:not([href="#nav"])').click(simple_slide);
+  
+    function _init(){
+        var width = $window.width();
+        console.log(width);
+        if(width<=767){
+            _init_mobile();
+        }else{
+            _init_desktop();
+        }
+    }
+
+    function _init_mobile(){
+        $nav.removeClass();
+        $window.off('scroll');
+        $nav.mmenu({
+            //moveBackground: false,
+            onClick:{
+                close: false, //true,
+                preventDefault: true,
+                setSelected: false,
+            }
+        }, {
+           pageNodetype: "page"
+        });
+    }
+
+    function _init_desktop(){
+    $('nav [class*="mm-"]').each(function(){
+        $(this).removeClass(function(index, classes){
+            var list = classes.split(" ");
+            var remove = [];
+            var c;
+            while(c=list.pop()){
+                if(c.match(/^mm-/))
+                    remove.push(c);
+            }
+            return remove.join(" ");
+        });
+    });
+        $window.scroll(function() {
+            if ($window.scrollTop() > $window.height() * 0.088){
+                $nav.addClass('navscroll').removeClass('navtop');
+            }
+            if ($window.scrollTop() < $window.height() * 0.088){
+                $nav.removeClass('navscroll').addClass('navtop');
+            }
+        });
+        $nav.removeClass().addClass('nav navtop');
+    }
+
+    _init();
+    $window.resize(_init);
+
+/****************************************************
     Setting the currently selected item in the menu. Needs some work.
   
   $('section').each(function(){
@@ -92,5 +101,26 @@ $(document).ready(function(){
         last_index=i;
         return false;
     });
-  });*/
+  });
+***************************************************/
 });
+
+function simple_slide(e){
+    e.preventDefault();
+    var that=this;
+    //setTimeout(function(that){
+        var dest = $(that).attr('href');
+        if(dest==="#nav") return;
+        var dest_pos = $(dest).offset().top;
+        var offset = 0;
+        var distance = dest_pos -  $(document).scrollTop();//down is positive
+        
+        $(document.body).animate({
+            scrollTop: dest_pos + offset
+        }, Math.min(scroll_max_animaton_time, Math.abs(distance)), function(){
+            var p=$(document).scrollTop();
+            window.location.hash = dest;
+            $("#nav").trigger('close');
+        });
+    //},400,that);
+}
