@@ -18,13 +18,10 @@
 
 	<!-- CSS
   ================================================== -->
-	<!--<link rel="stylesheet" href="css/skeleton/base.css">
-	<link rel="stylesheet" href="css/skeleton/skeleton.css">
-	<link rel="stylesheet" href="css/skeleton/layout.css">-->
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/foundation.css">
-	<link rel="stylesheet" type="text/css" href="jquery.mmenu.all.css" />
-	<link rel="stylesheet" type="text/css" href="js/vendor/jquery.overlay.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/foundation.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/jquery.mmenu.css" />
+	<link rel="stylesheet" type="text/css" href="css/vendor/jquery.overlay.css">
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!--TODO <link rel="stylesheet" type="text/css" href="css/responsive.css">-->
@@ -56,7 +53,7 @@
 	<![endif]-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/vendor/jquery.animate-shadow-min.js"></script>
-	<script src="jquery.mmenu.js"></script>
+	<script src="js/vendor/jquery.mmenu.js"></script>
 	<script src="js/vendor/jquery.overlay.js"></script>
 	<script src="js/vendor/foundation.min.js"></script>
 	
@@ -66,328 +63,330 @@
     <script src="js/contact.js"></script>
 </head>
 <body>
-        <nav id="nav" class="navtop">
+        <nav id="nav"><!--class="nav navtop">-->
         	<ul>
-		        <li><a href="#nav"><img src="img/logo.png" alt="" id="logo"/></a></li>
+		        <li class="no-mobile"><img src="img/logo.png" alt="" class="logo"/></li>
 		        <li><a href="#splash">Home</a></li>
 		        <li><a href="#mission">Our Mission</a></li>
+		        <li><a href="#faq">FAQ</a></li>
 		        <li><a href="#what-we-do">What We Do</a></li>
 		        <li><a href="#press">Press</a></li>
 		        <li><a href="#team">Team</a></li>
-		        <li><a href="#faq">FAQ</a></li>
 		        <li><a href="#calendar">Calendar</a></li>
-		        <li><a href="#contact">Contact</a></li>
-		        <li class="social"><a href="http://twitter.com/startupXchange">L</a></li>
-		        <li class="social"><a href="https://www.facebook.com/groups/315395218587873">f</a></li>
+		        <li class="no-mobile"><a href="#contact">Contact</a></li>
+		        <li class="social no-mobile"><a href="http://twitter.com/startupXchange">L</a></li>
+		        <li class="social no-mobile"><a href="https://www.facebook.com/groups/315395218587873">f</a></li>
 	        </ul>
 	    </nav>
-        <page><!--wrapper-->
-	        <section id="splash"><div id="bg">
-		        <header>
-	                <h1>Startup Exchange</h1>
-	                <p class="tagline">Welcome to Georgia Tech's entrepreneurial renaissance.</p>
-		        </header>
+        <page class="mm-page"><!--wrapper-->
+            <div id="logo-bg" class="mm-fixed-top mobile-only"></div>
+            <a href="#nav" id="logo"><img class="logo mm-fixed-top mobile-only" src="img/logo.png" alt=""/></a>
+            <section id="splash"><div id="bg">
+	            <header>
+                    <h1>Startup Exchange</h1>
+                    <p class="tagline">Welcome to Georgia Tech's entrepreneurial renaissance.</p>
+	            </header>
 
-		        <div class="bottom">
-			        <img src="img/downarrow.png" class="arrow" alt="Scroll down" />
-		        </div>	
-	        </div></section>
-	        <section id="mission" class="white-bg">
-		        <h2>Our mission</h2>
-		        <article>
-			        <dl>
-				        <dt class="word">cre&sdot;ate</dt>
-				        <dd class="pronunciation">/kr&#275;&#39;&#257;t/</dd>
-				        <dd class="part-of-speech">verb</dd>
-				        <dd class="definition">1. bring (something) into existence</dd>
-			        </dl>
-
-
-			        <p>We facilitate <strong>creation.</strong> Whether it's food carts or security devices or revolutionizing crutches, we all share a collective passion for building something we believe in. Georgia Tech has some of the most driven students in the world, but we can't become the founders and inventors spearheading change if we limit ourselves to what's taught in a classroom.</p>
-
-			        <p>We're hackers, storytellers, coders, and enthusiasts, but more than anything, we're a community.  And we want you. Stop by the Exchange and bring your ideas and experiences. We only require that you come in with a strong desire to learn, to grow, and of course - to create.</p>
-		        </article>
-
-	        </section>
-
-	        <section id="mailing-list">
-		        <h2>Join the mailing list</h2>
-		        <!-- Begin MailChimp Signup Form -->
-		        <form action="http://gatech.us5.list-manage2.com/subscribe/post?u=792e5a329ed7437ad903bc8a8&amp;id=5c64af8d82" method="post" id="email-mobile" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-				        <input type="email" placeholder="Enter your email and press enter" name="EMAIL" class="email-box required email" title="Press enter to join our mailing list" id="mce-EMAIL" autocomplete="off"> <br />
-			        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe">
-		        </form>
-
-	        <!--End mc_embed_signup-->
-	        </section>
+	            <div class="bottom">
+		            <img src="img/downarrow.png" class="arrow" alt="Scroll down" />
+	            </div>	
+            </div></section>
+            <section id="mission" class="white-bg">
+	            <h2>Our mission</h2>
+	            <article>
+		            <dl>
+			            <dt class="word">cre&sdot;ate</dt>
+			            <dd class="pronunciation">/kr&#275;&#39;&#257;t/</dd>
+			            <dd class="part-of-speech">verb</dd>
+			            <dd class="definition">1. bring (something) into existence</dd>
+		            </dl>
 
 
+		            <p>We facilitate <strong>creation.</strong> Whether it's food carts or security devices or revolutionizing crutches, we all share a collective passion for building something we believe in. Georgia Tech has some of the most driven students in the world, but we can't become the founders and inventors spearheading change if we limit ourselves to what's taught in a classroom.</p>
 
-	        <section id="faq" class="white-bg">
-		        <h2>FAQ</h2>
-		        <dl>
-			        <dt>Do you have regular meetings?</dt>
-			        <dd>Hell yeah. Startup Exchange huddles are every Friday at 4pm. But it only gets better - Rocky Mountain Pizza right afterwards at 6pm.</dd>
-			        <dt>What does the Startup Exchange do?</dt>
-			        <dd>We provide you with resources and skills so you can transform your ideas into tangible products.  But more importantly, we prepare you with fundamental skills to embody an entrepreneurial mindset of hustling, taking risks, and embracing failure. The workshops and programs we host all emphasize learning by doing + collaboration. </dd>
-			        <dt>Where are you located?</dt>
-			        <dd>Check it out. We hired a professional cartographer and made you a map.
-			        <img src="https://gallery.mailchimp.com/792e5a329ed7437ad903bc8a8/images/sX_location.png" style="display: block; margin: 30px 0"/> 
-			        sX is in the first floor of the GT library, adjacent to the Neely Gallery and opposite the computer cluster.</dd>
-			        <dt>I'm a designer/mechanical engineer/BME student. Is Startup Exchange just for CS and business majors?</dt>
-			        <dd>Definitely not. If you're interested in pursuing your passions, entrepreneurship, or just want to hang around cool people, we want you.</dd>
-			        <dt>How can I get more involved?</dt>
-			        <dd>Come and hang out in the Exchange. Once we figure out what you kick ass at (trust me, there's something), we'll put you on a team (or you'll start your own).</dd>
-			        <dt>When is the Startup Exchange space open?</dt>
-			        <dd>ALL DAY ERRDAY. But really, though. The space is open almost 24/7 (except Friday nights), and you're as likely to find students there in between classes as you are at two in the morning </dd>
-			        <dt>My question isn't here.</dt>
-			        <dd>That's not a question. But <a href="#contact">contact us</a> and we'll help you out</dd>
-		        </dl>
-	        </section>
+		            <p>We're hackers, storytellers, coders, and enthusiasts, but more than anything, we're a community.  And we want you. Stop by the Exchange and bring your ideas and experiences. We only require that you come in with a strong desire to learn, to grow, and of course - to create.</p>
+	            </article>
 
-	        <section id="what-we-do">
-		        <h2>What we do</h2>
-	        </section>
+            </section>
+
+            <section id="mailing-list">
+	            <h2>Join the mailing list</h2>
+	            <!-- Begin MailChimp Signup Form -->
+	            <form action="http://gatech.us5.list-manage2.com/subscribe/post?u=792e5a329ed7437ad903bc8a8&amp;id=5c64af8d82" method="post" id="email-mobile" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			            <input type="email" placeholder="Enter your email and press enter" name="EMAIL" class="email-box required email" title="Press enter to join our mailing list" id="mce-EMAIL" autocomplete="off"> <br />
+		            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe">
+	            </form>
+
+            <!--End mc_embed_signup-->
+            </section>
 
 
-	        <section id="press" class="white-bg">
-		        <h2>Press</h2>
-		        <div id="press-grid">
-			        <a href="http://www.ajc.com/news/business/canine-creation-winner/nXgFt/"><img id="test" src="img/logos/ajc.com.png" alt=""/></a>
-			        <a href="http://www.myajc.com/weblogs/ajc-tech-biz/2014/jan/07/6-more-predictions-atlantas-technology-community-2/"><img src="img/logos/ajc.svg" alt=""/></a>
-			        <a href="http://gsvcap.com/knowledge-economy/lingua-franca/"><img src="img/logos/gsvcap.svg" alt=""/></a>
-			        <a href="http://www.strategicvision.gatech.edu/news/entrepreneurial-ecosystem-takes-shape-among-students"><img src="img/logos/gt.png" alt=""/></a>
-			        <a href="http://www.hypepotamus.com/georgia-tech-student-reaches-indiegogo-goal-and-heading-to-techstars-boulder/"><img src="img/logos/hypepotamus.png" alt=""/></a>
-			        <a href="http://thepioneer.gatech.edu/2013/03/08/student-spotlight-jerome-choo-the-co-founder-of-startup-exchange/"><img src="img/logos/pioneer.png" alt=""/></a>
-			        <a href="http://signaltower.co/jerome-choo-on-designing-human-experiences/"><img src="img/logos/signaltower.png" alt=""/></a>
-			        <a href="http://nique.net/life/2013/09/12/startup-exchange-shows-promise/"><img src="img/logos/technique.png" alt=""/></a>
-			        <a href="http://ventureatlanta.org/2013/04/tackling-the-talent-crunch-from-students-to-entrepreneurs/"><img src="img/logos/ventureatlanta.jpg" alt=""/></a>
-		        </div>
-	        </section>
 
-	        <section id="team">
-		        <h2>Our team</h2>
+            <section id="faq" class="white-bg">
+	            <h2>FAQ</h2>
+	            <dl>
+		            <dt>Do you have regular meetings?</dt>
+		            <dd>Hell yeah. Startup Exchange huddles are every Friday at 4pm. But it only gets better - Rocky Mountain Pizza right afterwards at 6pm.</dd>
+		            <dt>What does the Startup Exchange do?</dt>
+		            <dd>We provide you with resources and skills so you can transform your ideas into tangible products.  But more importantly, we prepare you with fundamental skills to embody an entrepreneurial mindset of hustling, taking risks, and embracing failure. The workshops and programs we host all emphasize learning by doing + collaboration. </dd>
+		            <dt>Where are you located?</dt>
+		            <dd>Check it out. We hired a professional cartographer and made you a map.
+		            <img src="https://gallery.mailchimp.com/792e5a329ed7437ad903bc8a8/images/sX_location.png" style="display: block; margin: 30px 0"/> 
+		            sX is in the first floor of the GT library, adjacent to the Neely Gallery and opposite the computer cluster.</dd>
+		            <dt>I'm a designer/mechanical engineer/BME student. Is Startup Exchange just for CS and business majors?</dt>
+		            <dd>Definitely not. If you're interested in pursuing your passions, entrepreneurship, or just want to hang around cool people, we want you.</dd>
+		            <dt>How can I get more involved?</dt>
+		            <dd>Come and hang out in the Exchange. Once we figure out what you kick ass at (trust me, there's something), we'll put you on a team (or you'll start your own).</dd>
+		            <dt>When is the Startup Exchange space open?</dt>
+		            <dd>ALL DAY ERRDAY. But really, though. The space is open almost 24/7 (except Friday nights), and you're as likely to find students there in between classes as you are at two in the morning </dd>
+		            <dt>My question isn't here.</dt>
+		            <dd>That's not a question. But <a href="#contact">contact us</a> and we'll help you out</dd>
+	            </dl>
+            </section>
 
-		        <div class="team-wrapper">
-					
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh</p>
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <p>chintan@gtsx.org</p>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
-					        <div class="team-member">
-							        <div class="team-member-image">
-								        <img src="img/people/chintan.jpg">
-							        </div>
-							        <div class="team-member-sub">
-								        <p>Chintan Parikh
-							        </div>
-							        <div class="team-member-details" style="display: none;">
-								        <h2>Chintan Parikh - Director</h2>
-							        </div>
-					        </div>
+            <section id="what-we-do">
+	            <h2>What we do</h2>
+            </section>
 
-				        </div>
-	        </section>
 
-	        <section id="calendar" class="white-bg">
-		        <h2>Calendar</h2>
-		        <p>
-		            <h4><a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Complete Calendar</a></h4>
-		        </p>
-		        <p>
-		            <div id="loading" style="margin-top: 10%;">
-		                <img src="img/loading.gif">
-		            </div>
-		            <div id="events"></div>
-		        </p>
-	        </section>
-	
-	        <section id="contact">
-		        <h2>Contact us</h2>
-		        <div>
-		        <form id="frm_contact">
-		            <p>
-		                <input type="text" id="txt_contact_email" class="email-box" placeholder="Your email address">
+            <section id="press" class="white-bg">
+	            <h2>Press</h2>
+	            <div id="press-grid">
+		            <a href="http://www.ajc.com/news/business/canine-creation-winner/nXgFt/"><img id="test" src="img/logos/ajc.com.png" alt=""/></a>
+		            <a href="http://www.myajc.com/weblogs/ajc-tech-biz/2014/jan/07/6-more-predictions-atlantas-technology-community-2/"><img src="img/logos/ajc.svg" alt=""/></a>
+		            <a href="http://gsvcap.com/knowledge-economy/lingua-franca/"><img src="img/logos/gsvcap.svg" alt=""/></a>
+		            <a href="http://www.strategicvision.gatech.edu/news/entrepreneurial-ecosystem-takes-shape-among-students"><img src="img/logos/gt.png" alt=""/></a>
+		            <a href="http://www.hypepotamus.com/georgia-tech-student-reaches-indiegogo-goal-and-heading-to-techstars-boulder/"><img src="img/logos/hypepotamus.png" alt=""/></a>
+		            <a href="http://thepioneer.gatech.edu/2013/03/08/student-spotlight-jerome-choo-the-co-founder-of-startup-exchange/"><img src="img/logos/pioneer.png" alt=""/></a>
+		            <a href="http://signaltower.co/jerome-choo-on-designing-human-experiences/"><img src="img/logos/signaltower.png" alt=""/></a>
+		            <a href="http://nique.net/life/2013/09/12/startup-exchange-shows-promise/"><img src="img/logos/technique.png" alt=""/></a>
+		            <a href="http://ventureatlanta.org/2013/04/tackling-the-talent-crunch-from-students-to-entrepreneurs/"><img src="img/logos/ventureatlanta.jpg" alt=""/></a>
+	            </div>
+            </section>
+
+            <section id="team">
+	            <h2>Our team</h2>
+
+	            <div class="team-wrapper">
+				
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh</p>
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <p>chintan@gtsx.org</p>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+				            <div class="team-member">
+						            <div class="team-member-image">
+							            <img src="img/people/chintan.jpg">
+						            </div>
+						            <div class="team-member-sub">
+							            <p>Chintan Parikh
+						            </div>
+						            <div class="team-member-details" style="display: none;">
+							            <h2>Chintan Parikh - Director</h2>
+						            </div>
+				            </div>
+
+			            </div>
+            </section>
+
+            <section id="calendar" class="white-bg">
+	            <h2>Calendar</h2>
+	            <p>
+	                <h4><a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Complete Calendar</a></h4>
+	            </p>
+	            <p>
+	                <div id="loading" style="margin-top: 10%;">
+	                    <img src="img/loading.gif">
+	                </div>
+	                <div id="events"></div>
+	            </p>
+            </section>
+
+            <section id="contact" class="no-mobile">
+	            <h2>Contact us</h2>
+	            <div>
+	            <form id="frm_contact">
+	                <p>
+	                    <input type="text" id="txt_contact_email" class="email-box" placeholder="Your email address">
                     </p><p>
-		                <textarea id="txt_contact_message" class="email-msg" placeholder="Send us a message"></textarea>
+	                    <textarea id="txt_contact_message" class="email-msg" placeholder="Send us a message"></textarea>
                     </p>
-		                <span id="btn_contact_submit" title="Send message">Send</span>
-	                
-		        </form>
+	                    <span id="btn_contact_submit" title="Send message">Send</span>
+                    
+	            </form>
                 </div>
-	        </section>
+            </section>
 	    </page><!--wrapper-->
 </body>
 </html>
