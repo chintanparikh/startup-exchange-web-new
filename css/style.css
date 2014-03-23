@@ -183,6 +183,7 @@ h2 {
   	-webkit-transition:.5s;
   	/* ...and now for the proper property */
   	transition:.5s;
+  	padding: 20px;
 }
 
 #press-grid img:hover {
@@ -342,6 +343,10 @@ h2 {
     outline: none;
     margin-top: 40px;
     resize: none;
+}
+
+#calendar p{
+    margin-top: 5%;
 }
 
 
