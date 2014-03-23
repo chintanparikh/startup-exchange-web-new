@@ -144,5 +144,21 @@
 	    width: 30px;
 	    margin: 0 auto;
     }
-
+    /* Mission */
+    #mission article {
+        width: auto;
+    }
+    
+    h2 {
+        display: block;
+    }
+    #splash h1{
+        font-size: inherit;
+        display: block;
+    }
+    
+    #press-grid img {
+        max-width: 90%;
+        padding-top: 0.5em;
+    }
 }

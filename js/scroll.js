@@ -21,16 +21,18 @@ $(document).ready(function(){
   
     //scrolling links
     if(!Modernizr.touch){
+        //this works on my Android in Chrome, but it isn't smooth
         $(document.body).find('a[href^="#"]:not([href="#nav"])').click(simple_slide);
     }else{
         prevent_hyperlinks = false;
     }
     
+    /* Debug lines
     $(document.body).append(
         '<div id="center" style="background-color:red; height:2px; width:100%; position:absolute; z-index: 9999;"></div>'+
         '<div id="top" style="background-color:yellow; height:10px; width:100%; position:absolute; z-index: 9999;"></div>'+
         '<div id="bottom" style="background-color:blue; height:10px; width:100%; position:absolute; z-index: 9999;"></div>'
-    );
+    );*/
     
     $nav.mmenu({
         onClick:{
@@ -48,22 +50,13 @@ $(document).ready(function(){
             $nav.removeClass('navscroll').addClass('navtop');
         }
         
-        var log={};
         var screen_center = $(document).scrollTop() + $window.height()/2;
-        log.screen_center = screen_center;
         var was_in = $('nav li[class*=mm-selected] a').attr('href') || "#splash";
-        log.was_in = was_in;
-        var wtop = $(was_in).offset().top;
-        log.wtop=wtop;
+        var top = $(was_in).offset().top;
         var next = $(was_in).next('section:visible').offset();
-        var wbottom = (next ? next.top : wtop+$(was_in).height());
-        log.wbottom = wbottom;
+        var bottom = (next ? next.top : top+$(was_in).height());
         
-            $('#top').css('top', wtop-5);
-            $('#center').css('top', screen_center-1);
-            $('bottom').css('top', wbottom-10);
-        
-        if( screen_center > wbottom || screen_center < wtop){ //selection change needs to occur
+        if( screen_center > bottom || screen_center < top){ //selection change needs to occur
             $('nav li[class*=mm-selected]').removeClass('mm-selected');
             
             $('section:visible').each(function(){
@@ -73,44 +66,12 @@ $(document).ready(function(){
                 var bottom = (next ? next.top : top+$_this.height());
                 if( bottom > screen_center ){
                     $('nav a[href="#'+$_this.attr('id')+'"]').parent().addClass('mm-selected');
-                    log.set = $_this.attr('id');
-                    console.log(log);
                     return false; //break
                 }
             });
         }
     });
     $window.scroll();
-
-/****************************************************
-    Setting the currently selected item in the menu. Needs some work.
-*/
-  
-    //this is super elegant, but sadly doesn't work well
-    //if($(this).height()>0) section_positions[ Math.floor($(this).offset().top)] = $(this).attr('id');
-    
-        //visible_sections.push( $(this).attr('id') );
-    
-    /*var last_index=0;
-    var l={};
-    section_positions.some(function(e,i,a){
-        l={
-            current: current,
-            testing: e,
-            position: i,
-            difference: i-current
-        };
-        if(i-current>250){
-            $('nav li').removeClass('mm-selected');
-            $('nav a[href="#'+a[last_index]+'"]').parent().addClass('mm-selected');
-            l.using = a[last_index];
-            console.log(l);
-            return true;
-        }
-        last_index=i;
-        return false;
-    });*/
-/***************************************************/
 });
 
 function simple_slide(e){
