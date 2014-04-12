@@ -56,11 +56,13 @@
 	<script src="js/vendor/jquery.mmenu.js"></script>
 	<script src="js/vendor/jquery.overlay.js"></script>
 	<script src="js/vendor/foundation.min.js"></script>
+	<script src="js/vendor/mustache.js"></script>
 	
 	<script src="js/scroll.js"></script>
     <script src="js/calendarproxy.js"></script>
     <script src="js/captcha.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/team.js"></script>
 </head>
 <body>
         <nav id="nav" class="nav">
@@ -169,23 +171,25 @@
 
             <section id="team" class="no-mobile">
 	            <h2>Our team</h2>
-
-	            <div class="team-wrapper">
-				            <div class="team-member">
-						            <div class="team-member-image">
-							            <img src="img/people/chintan.jpg">
-						            </div>
-						            <a href="mailto:chintan@gtsx.org">
-						            <div class="team-member-sub">
-								            <p>Chintan Parikh
-							            </div>
-						            </a>
-					            	<div class="team-member-details" style="display: none;">
-							            <h2>Director</h2>
-						            </div>
+	            <div class="team-wrapper" id="team-wrapper">
+	            	<!-- mustache.js template -->
+	            	<div id="team-template" style="display: none;">
+			            <div class="team-member">
+				            <div class="team-member-image">
+					            <img src="{{image}}">
 				            </div>
-
+				            <a href="mailto:{{email}}">
+					            <div class="team-member-sub">
+						            <p>{{name}}</p>
+						        </div>
+				            </a>
+			            	<div class="team-member-details" style="display: none;">
+					            <h2>{{title}}</h2>
+				            </div>
 			            </div>
+			        </div>
+		            <!-- end template -->
+		        </div>
             </section>
 
             <section id="calendar" class="white-bg">

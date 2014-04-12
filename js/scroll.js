@@ -10,16 +10,6 @@ $(document).ready(function(){
     var $window = $(window);
     var $nav = $("#nav");
   
-    $(".team-member").hover(
-        function () {
-            $(".team-member-details", this).stop(true,true).fadeIn();
-        },
-        function () {
-            $(".team-member-details", this).stop(true,true).fadeOut();
-        }
-    );
-  
-  
     //scrolling links
     if(!Modernizr.touch){
         //this works on my Android in Chrome, but it isn't smooth
