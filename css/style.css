@@ -203,6 +203,8 @@ h2 {
 
 #team {
 	background: url("../img/3ds.jpg") no-repeat center center fixed;
+/*	padding-left: 0px;
+	padding-right: 0px;*/
 }
 
 #mailing-list .subscribe {
@@ -240,8 +242,9 @@ h2 {
 .team-wrapper {
 		margin: 0 auto;
         margin-top: 10%;
-        overflow: hidden;
         padding-bottom: 10%;
+        /*display: inline-block;*/
+        /*width: 60%;*/
 }
 
 .team-member {
