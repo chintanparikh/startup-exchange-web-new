@@ -65,7 +65,7 @@
                 results = data;
             })
             .fail(function(xhr, textstatus, errorThrown){
-                console.log("Calendar request failed");
+                throw new Error("Calendar request failed - " + errorThrown);
                 results = errorThrown;
             })
             .always(function(){
@@ -90,7 +90,7 @@
     module.pretty_date = function(d){
         var today = new Date();
         var one_day = 1000*60*60*24;
-        var diff = Math.ceil(d.getTime() - today.getTime())/one_day;
+        var diff = Math.ceil((d.getTime() - today.getTime())/one_day);
         if(diff==-1)                return "Yesterday at "+module.pretty_time(d);
         else if(diff==0)            return "Today at "+module.pretty_time(d);
         else if(diff==1)            return "Tomorrow at"+module.pretty_time(d);
@@ -134,7 +134,7 @@ function format(event){
         var when= new Date(event.start);
         return (
         '<div class="cal-event">'+
-            '<a href="'+event.html_link+'">'+
+            '<a href="'+event.html_link+'" target="_blank">'+
                 "<h3>"+(event.title || "Untitled")+"</h3>"+
             '</a>'+
             (event.where ? "Where: "+event.where+"<br>" : "")+
