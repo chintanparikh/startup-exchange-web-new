@@ -165,4 +165,9 @@
     #mailing-list form {
         margin-top: 75%;
     }
+
+    #splash .tagline{
+        width: auto;
+        padding-top: 30%;
+    }
 }

@@ -3,6 +3,7 @@
 var section_positions=[];
 var scroll_max_animaton_time=2000;
 var prevent_hyperlinks = true;
+var auto_close = false;
 
 $(document).ready(function(){
 
@@ -25,6 +26,7 @@ $(document).ready(function(){
         $(document.body).find('a[href^="#"]:not([href="#nav"])').click(simple_slide);
     }else{
         prevent_hyperlinks = false;
+        auto_close = true;
     }
     
     /* Debug lines
@@ -36,7 +38,7 @@ $(document).ready(function(){
     
     $nav.mmenu({
         onClick:{
-            close: false,//true,
+            close: auto_close,
             preventDefault: prevent_hyperlinks,
             setSelected: false,
         }
