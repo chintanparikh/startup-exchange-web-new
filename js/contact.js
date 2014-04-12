@@ -17,6 +17,18 @@ $.fn.extend({
 });
 
 function secure_contact(){
+
+    $.ajax({
+        method:"POST",
+        url: "/php/email_form.php",
+        data: {
+            email:      $('#contact-email').val(),
+            comments:   $('#contact-message').val()
+        }
+    })
+    .done(function(result){
+        alert(result); //TODO make pretty
+    });
 /*    $.overlay.create(
         '<div>'+
             '<p>Please inter the following text in the block below for security purposes.<p>'+
