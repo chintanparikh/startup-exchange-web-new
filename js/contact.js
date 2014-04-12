@@ -69,16 +69,16 @@ function secure_contact(){
 
 
 $(document).ready(function(){
-    $('#contact-submit')
-        .mouseover(function(){
-            $(this).animate({
+    $("#contact-submit").hover(
+        function () {
+            $("#contact-submit").stop(true,true).animate({
                  opacity: 1,
-            },150);
-        })
-         .mouseout(function(){
-            $(this).animate({
+            },400);
+        },
+        function () {
+            $("#contact-submit").stop(true,true).animate({
                 opacity: 0.25,
-            },75);
-        })
-        .click(secure_contact);
+            },400);
+        }
+    ).click(secure_contact);
 });
