@@ -73,65 +73,106 @@
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
+    /* Tablet Nav */
+    .nav {
+        z-index: 999;
+        width: 100%;
+        text-align: center;
+    }
+    .nav ul{
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
+    .nav li {
+        float: left;
+        line-height: 55px;
+        /*margin-right: 20px;*/
+        font-family: "stratum2";
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-left: .5em;
+        padding-right: .5em;
+    }
 
-/*    /* Splash */*/
-/*    #nav {*/
-/*        font-size: 12px;*/
-/*    }*/
-/*    #nav img{*/
-/*        width: 30px;*/
-/*        height: auto;*/
-/*        padding-top: 10px;*/
-/*    }*/
-/*    */
-/*    #splash h1{*/
-/*        font-size: 33px;*/
-/*    }*/
-/*    */
-/*    #splash .tagline{*/
-/*        width: auto;*/
-/*    }*/
-/*    */
-/*    #splash header{*/
-/*        padding-top: 30%;*/
-/*        width: auto;*/
-/*    }*/
-/*    */
-/*    .navtop{*/
-/*        /*margin-left: -33%;*/
-/*        margin-top: -2em;*/
-/*        padding-left: 1em;*/
-/*        position: fixed;*/*/
-/*        position: absolute;*/
-/*        top: 0;*/
-/*        /*width: 100%;*/*/
-/*        left: 0;*/
-/*        padding-left: 1em;*/
-/*        height: 60px;*/
-/*    }*/
-/*    */
-/*    .navscroll{*/
-/*        padding-left: 1em;*/
-/*        width: 100%;*/
-/*    }*/
-/*    */
-/*    /* Mission */*/
-/*    #mission article {*/
-/*        width: auto;*/
-/*    }*/
+
+    .nav li a {
+        color: #ffffff;
+        text-decoration: none;
+        padding-bottom: 6px;
+    }
+
+    .nav li.social a {
+        font-family: "Socialico";
+        text-transform: none;
+        font-size: 18px;
+        line-height: 55px
+    }
+
+    .nav li a:hover {
+        position: relative;
+        bottom: 2px;
+    }
+
+    .navtop{
+        padding-top: 5%;
+        position: absolute;
+    }
+
+    .navscroll {
+        background: rgba(0, 0, 0, 1);
+        top: 0;
+        left: 0;
+        position: fixed;
+        /*padding-left: 20%;*/
+        height: 9%;
+        min-height: 55px;
+    }
+    
+    .navscroll ul li.mm-selected{
+        border-bottom: white;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        background-color:white;
+    }
+    .navscroll ul li.mm-selected a{
+        color: black;
+    }
+
+    .logo {
+       height: 35px;
+       width: 35px; 
+    }
+
+    #splash h1{
+        font-size: 33px;
+        margin-top: 3em;
+    }
+    
+    #splash .tagline{
+        width: auto;
+        padding-top: 35%;
+    }
+    
+    #splash header{
+        padding-top: 30%;
+        width: auto;
+    }
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 /*@media only screen and (min-width: 768px) and (max-width: 959px) {}*/
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {}
+/*@media only screen and (max-width: 767px) {}*/
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+/*@media only screen and (min-width: 480px) and (max-width: 767px) {}*/
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
+/*@media only screen and (max-width: 479px) {*/
+@media only screen and (max-width: 640px) {
     .no-mobile{
         display: none !important;
     }
