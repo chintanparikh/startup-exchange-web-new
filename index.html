@@ -20,15 +20,15 @@
 <body>
 	<section id="splash">
 		<ul id="nav">
-			<li><img src="img/logo.png" alt="" id="logo"/></li>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Our Mission</a></li>
-			<li><a href="#">What We Do</a></li>
-			<li><a href="#">Press</a></li>
-			<li><a href="#">Team</a></li>
-			<li><a href="#">FAQ</a></li>
-			<li><a href="#">Calendar</a></li>
-			<li><a href="#">Contact</a></li>
+			<li id="li-logo"><img src="img/logo.png" alt="" id="logo"/></li>
+			<li><a href="#splash">Home</a></li>
+			<li><a href="#mission">Our Mission</a></li>			
+			<li><a href="#faq">FAQ</a></li>
+			<li><a href="#what-we-do">What We Do</a></li>
+			<li><a href="#press">Press</a></li>
+			<li><a href="#team">Team</a></li>
+			<li><a href="#calendar">Calendar</a></li>
+			<li><a href="mailto: chintanparikh@gatech.edu">Contact</a></li>
 			<li class="social"><a href="http://twitter.com/startupXchange">L</a></li>
 			<li class="social"><a href="https://www.facebook.com/groups/315395218587873">f</a></li>
 		</ul>
@@ -131,29 +131,26 @@
 								<p>Chintan Parikh</p>
 							</div>
 							<div class="team-member-details" style="display: none;">
-								<p>chintan@gtsx.org</p>
-							</div>
-					</div>
-					<div class="team-member">
-							<div class="team-member-image">
-								<img src="https://scontent-b-iad.xx.fbcdn.net/hphotos-ash4/1375940_644187362268054_1121005468_n.jpg">
-							</div>
-							<div class="team-member-sub">
-								<p>Chintan Parikh
-							</div>
-							<div class="team-member-details" style="display: none;">
 								<h2>Chintan Parikh - Director</h2>
 							</div>
 					</div>
 					<div class="team-member">
 							<div class="team-member-image">
-								<img src="https://scontent-b-iad.xx.fbcdn.net/hphotos-ash4/1375940_644187362268054_1121005468_n.jpg">
+								<img src="https://scontent-a-iad.xx.fbcdn.net/hphotos-xfp1/t1.0-9/10007448_757967274221275_1039614113_n.jpg">
 							</div>
 							<div class="team-member-sub">
-								<p>Chintan Parikh
+								<p>Sameera Omar
 							</div>
 							<div class="team-member-details" style="display: none;">
-								<h2>Chintan Parikh - Director</h2>
+								<h2>Sameera Omar - Director</h2>
+							</div>
+					</div>
+					<div class="team-member">
+							<div class="team-member-image">
+								<img src="https://scontent-b-iad.xx.fbcdn.net/hphotos-xfa1/t1.0-9/1002305_10151756355254770_1878750086_n.jpg">
+							</div>
+							<div class="team-member-details" style="display: none;">
+								<h2>Shivani Negi - Startup Chicks</h2>
 							</div>
 					</div>
 					<div class="team-member">
@@ -315,12 +312,24 @@
 	</section>
 
 	<section id="calendar" class="white-bg">
-		<h2>Calendar</h2>
-	</section>
+	            <h2>Calendar</h2>
+	            <p>
+	                <!--<h4><a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Complete Calendar</a></h4>-->
+	                <a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Google</a>
+	                &nbsp;-&nbsp;
+	                <a href="https://www.google.com/calendar/ical/orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com/public/basic.ics">iCal</a>
+	            </p>
+                <div id="loading" style="margin-top: 10%;">
+                    <img src="img/loading.gif">
+                </div>
+                <div id="events"></div>
+            </section>
 
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/vendor/jquery.plusanchor.js"></script>	
 	<script src="js/scroll.js"></script>
+	<script src="js/calendar.js"></script>
 
 </body>
 </html>

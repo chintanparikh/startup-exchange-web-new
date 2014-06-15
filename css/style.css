@@ -6,10 +6,36 @@
 	font-family: "Open Sans", sans-serif
 }
 
+a img {
+	border: none;
+}
+
+a {
+	color: #008cba;
+	text-decoration: none;
+	line-height: inherit;
+}
+
+img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+img, object, embed {
+	max-width: 100%;
+	height: auto;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
 	color: #ffffff;
+	position: relative;
+
 }
 
 section {
@@ -33,6 +59,10 @@ section {
 	width: 50px;
 	margin: 0 auto;
 	margin-top: 5px;
+}
+
+#splash ul #li-logo {
+	line-height: 50px;
 }
 
 #splash ul {
@@ -191,18 +221,17 @@ h2 {
 	padding-bottom: 10%;
 }
 
-#press-grid img{
+#press-grid img {
 	max-width: 300px;
-	max-height: 100px
-	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    -o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	/* ...and now for the proper property */
-  	transition:.5s;
+	max-height: 100px filter: url(filters.svg#grayscale);
+	filter: gray;
+	-webkit-filter: grayscale(1);
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+	padding: 20px;
 }
 
 #press-grid img:hover {
@@ -257,25 +286,26 @@ h2 {
 .team-wrapper {
 		width: 660px;
 		margin: 0 auto;
-        margin-top: 10%;
+        margin-top: 5%;
         overflow: hidden;
         padding-bottom: 10%;
 }
 
 .team-member {
-        width: 150px;
-        height: 150px;
-        float: left;
-        margin: 5px;
-        background: #000;
-        border: 2px solid #fff;
-        position: relative;
-        z-index: 1;
+
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin: 5px;
+	position: relative;
+	z-index: 1;
+	padding: 15px;
 }
 
 .team-member img {
         width: auto;
         height: 100%;
+        border-radius: 9999px;
 }
 
 .team-member h2 {
@@ -287,23 +317,34 @@ h2 {
 }
 
 .team-member-image {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         overflow: hidden;
+	border: 2px solid #ffffff;
+        border-radius: 9999px;
 }
 
-.team-member-details {
+.team-member-details {        
+		border-radius: 9999px;
         background: rgba(0,0,0,0.75);
         display: none;
         position: absolute;
-        width: 130px;
-        height: 110px;
-        padding: 30px 10px 10px 10px;
-        top: 0;
-        left: 0;
+        width: 100px;
+        height: 90px;
+        padding: 30px 10px 0 10px;
+	top: 17px;
+	left: 17px;
+
+        font-size: 10px;
+        overflow: scroll;
+}
+
+.team-member-details h2{
+	font-size: 15px;
 }
 
 .team-member-sub {
+	display: none;
 		color: #000000;
 		line-height: 30px;
 		background: #ffffff;
@@ -313,4 +354,12 @@ h2 {
         padding: 0 10px 0 10px;
         bottom: 0;
         left: 0;
+}
+
+.cal-event{
+    margin-top: 50px;
+}
+
+#calendar p {
+	margin-top: 5%;
 }
