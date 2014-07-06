@@ -211,6 +211,34 @@ h2 {
 	background: url("../img/bg.jpg") no-repeat center center fixed;
 }
 
+#whatwedo-grid {
+	list-style: none;
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 5%;
+
+}
+
+#whatwedo-grid li {
+	float: left;
+	max-height: 300px filter: url(filters.svg#grayscale);
+	filter: gray;
+	-webkit-filter: grayscale(1);
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+	max-width: 300px;
+}
+
+#whatwedo-grid li:hover{
+	filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+
 #press {
 	background: #ffffff;
 	min-height: 0;
