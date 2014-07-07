@@ -3,12 +3,32 @@
 <head>
 	<title>Startup Exchange - Georgia Tech's Entrepreneurial Movement</title>
 	
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="fonts/socialico/socialico.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Targetting mobile devices -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="screen and (max-device-width : 480px)" type="text/css" href="css/mobile.css" />
+	<link rel="stylesheet" media="screen and (max-width : 480px)" type="text/css" href="css/mobile.css" />
+	<link rel="stylesheet" media="screen and (max-device-width: 480px)" type="text/css" href="css/mobile.css" />
+	<link rel="stylesheet" media="screen and (-webkit-device-pixel-ratio:.75)" type="text/css" href="css/mobile.css" />
+	<!--[if IEMobile 7]>  	
+		<link rel="stylesheet" media="screen" type="text/css" href="css/mobile.css" />
+	<![endif]-->
+
+	<!-- Tablets -->
+	<link rel="stylesheet" media="screen and (min-width : 480px) and (max-width : 800px)" type="text/css" href="css/tablets.css" />
+	<link rel="stylesheet" media="screen and (min-device-width : 480px) and (max-device-width : 800px)" type="text/css" href="css/tablets.css" />
+
+	<!-- Thinner screens -->
+	<link rel="stylesheet" media="screen and (min-width : 800px) and (max-width : 1366px)" type="text/css" href="css/smaller-screens.css" />
+	<link rel="stylesheet" media="screen and (min-device-width : 800px) and (max-device-width : 1224px)" type="text/css" href="css/smaller-screens.css" />
+
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
@@ -99,12 +119,12 @@
 	<section id="what-we-do">
 		<h2>What we do</h2>
 			<ul id="whatwedo-grid">
-				<li><a href="http://startupsemester.gatech.edu"><img src="img/startupsemesterpreview.png"/></a></li>
-				<li><a href="http://hackgt.com"><img src="img/hackgtpreview.png" /></li>
-				<li><a href="http://gatech.3daystartup.org/"><img src="img/3dspreview.png" /></li>
-				<li><a href="http://startupchicks.org/"><img src="img/startupchickspreview.png" /></li>
-				<li><a href="https://ieee.gatech.edu/Innovation.shtml"><img src="img/innovationteampreview.png" /></li>
-				<li><a href="http://www.en2em.org/"><img src="img/en2empreview.png" /></li>
+				<li><a href="http://startupsemester.gatech.edu"><img src="img/startupsemesterpreview.png" class="hoverswitch" data-switch="img/startupsemesterhover.png" /></a></li>
+				<li><a href="http://hackgt.com"><img src="img/hackgtpreview.png"  class="hoverswitch" data-switch="img/hackgthover.png" /></li>
+				<li><a href="http://gatech.3daystartup.org/"><img src="img/3dspreview.png"  class="hoverswitch" data-switch="img/3dshover.png" /></li>
+				<li><a href="http://startupchicks.org/"><img src="img/startupchickspreview.png"  class="hoverswitch" data-switch="img/startupchickshover.png" /></li>
+				<li><a href="https://ieee.gatech.edu/Innovation.shtml"><img src="img/innovationteampreview.png"  class="hoverswitch" data-switch="img/innovationteamhover.png" /></li>
+				<li><a href="http://www.en2em.org/"><img src="img/en2empreview.png"  class="hoverswitch" data-switch="img/en2emhover.png" /></li>
 			</ul>
 			<div style="clear:both; padding-bottom: 10%;">&nbsp;</div>
 	</section>
@@ -297,24 +317,25 @@
 	</section>
 
 	<section id="calendar" class="white-bg">
-	            <h2>Calendar</h2>
-	            <p>
-	                <!--<h4><a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Complete Calendar</a></h4>-->
-	                <a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Google</a>
-	                &nbsp;-&nbsp;
-	                <a href="https://www.google.com/calendar/ical/orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com/public/basic.ics">iCal</a>
-	            </p>
-                <div id="loading" style="margin-top: 10%;">
-                    <img src="img/loading.gif">
-                </div>
-                <div id="events"></div>
-            </section>
+        <h2>Calendar</h2>
+        <p>
+            <!--<h4><a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Complete Calendar</a></h4>-->
+            <a href="https://www.google.com/calendar/embed?src=orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com&ctz=America/New_York">Google</a>
+            &nbsp;-&nbsp;
+            <a href="https://www.google.com/calendar/ical/orpm6td3rsutl3972oosf4ksds%40group.calendar.google.com/public/basic.ics">iCal</a>
+        </p>
+        <div id="loading" style="margin-top: 10%;">
+            <img src="img/loading.gif">
+        </div>
+        <div id="events"></div>
+    </section>
 
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/vendor/jquery.plusanchor.js"></script>	
 	<script src="js/scroll.js"></script>
 	<script src="js/calendar.js"></script>
+	<script src="js/hovers.js"></script>
 
 </body>
 </html>
