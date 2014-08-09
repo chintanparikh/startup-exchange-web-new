@@ -4,6 +4,7 @@ $(document).ready(function() {
 			switchTo = $(element).data('switch')
 			$(element).data('switch', $(element).attr('src'));
 			$(element).attr('src', switchTo);
+			console.log($(element).attr('src'));
 		});
 	})
 });

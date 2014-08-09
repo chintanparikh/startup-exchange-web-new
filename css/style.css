@@ -264,7 +264,8 @@ h2 {
 
 .whatwedo-image img {
 	float: left;
-	max-height: 300px filter: url(filters.svg#grayscale);
+	max-height: 300px;
+	filter: url(filters.svg#grayscale);
 	filter: gray;
 	-webkit-filter: grayscale(1);
 	-o-transition: .5s;
@@ -276,7 +277,7 @@ h2 {
 	max-width: 300px;
 }
 
-#whatwedo-grid a:hover{
+.whatwedo-image img:hover{
 	filter: none;
     -webkit-filter: grayscale(0);
 }
