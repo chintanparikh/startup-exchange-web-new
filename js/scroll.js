@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+
+  // Mobile Nav
+  $("#expand").click(function () {
+    $('.li-link').each(function(i, e) {
+      $(e).toggleClass('show');
+    })
+  })
+
   $('body').plusAnchor();
 
   var $window = $(window);
@@ -17,15 +25,7 @@ $(document).ready(function(){
   $window.scroll(function() {
     if ($window.scrollTop() > $window.height() * 0.06)
     {
-      $("#nav").css({
-      	background: "rgba(0, 0, 0, 1)",
-      	position: "fixed",
-      	top: "0",
-      	width: "100%",
-      	left: "0",
-      	paddingLeft: "20%",
-      	height: "60px"
-      });
+      $("#nav").addClass('stuck')
 
       $("#splash header").css({
       	marginTop: "80px"
@@ -33,7 +33,7 @@ $(document).ready(function(){
     }
     if ($window.scrollTop() < $window.height() * 0.06)
     {
-		$("#nav").removeAttr("style");
+		$("#nav").removeClass("stuck");
 		$("#splash header").removeAttr("style");
     }
   });

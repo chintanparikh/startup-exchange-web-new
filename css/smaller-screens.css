@@ -1,3 +1,32 @@
-#splash h1 {
-	border: none;
+
+#whatwedo-grid {
+	width: 600px;
+}
+
+#mission article {
+	width: 100%;
+}
+@media (max-width: 1270px) {
+	#splash h1 {
+		border: none;
+		padding: 0;
+	}
+}
+
+@media (max-width: 1000px) {
+	#splash ul {
+		width: 166%;
+		margin: 0;
+		padding: 0;
+		margin-left: -30%;
+	}
+
+	#nav.stuck {
+		background: rgba(0, 0, 0, 1);
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding-left: 32%;
+		height: 60px;
+	}
 }

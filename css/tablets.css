@@ -1,0 +1,79 @@
+section .container {
+	width: 90%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+#splash h1 {
+	border: none;
+	padding: 0;
+}
+
+#splash ul {
+	width: 166%;
+	margin: 0;
+	padding: 0;
+	margin-left: -30%;
+}
+
+#splash ul .li-link{
+	display: none;
+	width: 100%;
+	line-height: 30px;
+}
+
+#splash ul .li-link.show{
+	display: block;
+	width: 100%;
+	line-height: 30px;
+}
+
+#splash ul li{
+	width: 100%;
+	line-height: 20px;
+}
+#splash ul li.social a {
+	line-height: 30px
+}
+#expand {
+	display: inline;
+}
+
+#whatwedo-grid {
+	width: 600px;
+}
+
+#mission article {
+	width: 100%;
+}
+
+#nav.stuck {
+	background: rgba(0, 0, 0, 1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-left: 30%;
+	height: 60px;
+}
+
+#splash ul {
+	width: 160%;
+
+}
+
+#nav.stuck li{
+	background: rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 610px) {
+	#whatwedo-grid {
+		width: 300px;
+	}
+
+	.team-wrapper {
+			width: 500px;
+			margin: 0 auto;
+	        margin-top: 5%;
+	        overflow: hidden;
+	        padding-bottom: 10%;
+	}
+}

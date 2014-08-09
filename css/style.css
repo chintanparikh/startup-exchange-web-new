@@ -45,7 +45,6 @@ section {
 section .container {
 	width: 60%;
 	margin: 0 auto;
-	padding: 3% 20%;
 	padding-bottom: 0;
 	min-height: 100%;
 	text-align: center;
@@ -72,8 +71,50 @@ section .container.notop {
 	padding-top: 3%;
 }
 
+#nav.stuck {
+	background: rgba(0, 0, 0, 1);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	padding-left: 20%;
+	height: 60px;
+}
+
 #nav {
+	list-style: none;
+	z-index: 999;
 	width: 140%;
+}
+
+#nav li {
+	float: left;
+	line-height: 60px;
+	margin-right: 20px;
+	font-family: "stratum2";
+	text-transform: uppercase;
+}
+
+#nav li a {
+	color: #ffffff;
+	text-decoration: none;
+	padding-bottom: 6px;
+}
+
+#nav li.social a {
+	font-family: "Socialico";
+	text-transform: none;
+	font-size: 20px;
+	line-height: 65px
+}
+
+#nav li a:hover {
+	position: relative;
+	bottom: 2px;
+}
+
+#expand {
+	display: none;
 }
 
 
@@ -84,40 +125,15 @@ section .container.notop {
 	margin-top: 5px;
 }
 
-#splash ul #li-logo {
+#nav #li-logo {
 	line-height: 50px;
 }
 
-#splash ul {
-	list-style: none;
-	z-index: 999;
+.li-expand {
+	display: none;
 }
 
-#splash ul li {
-	float: left;
-	line-height: 60px;
-	margin-right: 20px;
-	font-family: "stratum2";
-	text-transform: uppercase;
-}
 
-#splash ul li a {
-	color: #ffffff;
-	text-decoration: none;
-	padding-bottom: 6px;
-}
-
-#splash ul li.social a {
-	font-family: "Socialico";
-	text-transform: none;
-	font-size: 20px;
-	line-height: 65px
-}
-
-#splash ul li a:hover {
-	position: relative;
-	bottom: 2px;
-}
 
 #splash header {
 	width: 80%;
@@ -141,7 +157,7 @@ section .container.notop {
 	font-size: 36px;
 	font-family: "stratum2";
 	font-weight: 100;
-	width: 600px;
+	/*width: 600px;*/
 	margin: 0 auto;
 	padding-top: 30px;
 }
@@ -340,7 +356,7 @@ h2 {
 
 
 .team-wrapper {
-		width: 660px;
+		width: 640px;
 		margin: 0 auto;
         margin-top: 5%;
         overflow: hidden;

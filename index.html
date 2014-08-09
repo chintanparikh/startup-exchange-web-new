@@ -22,12 +22,12 @@
 	<![endif]-->
 
 	<!-- Tablets -->
-	<link rel="stylesheet" media="screen and (min-width : 480px) and (max-width : 800px)" type="text/css" href="css/tablets.css" />
-	<link rel="stylesheet" media="screen and (min-device-width : 480px) and (max-device-width : 800px)" type="text/css" href="css/tablets.css" />
+	<link rel="stylesheet" media="screen and (min-width : 480px) and (max-width : 834px)" type="text/css" href="css/tablets.css" />
+	<link rel="stylesheet" media="screen and (min-device-width : 480px) and (max-device-width : 834px)" type="text/css" href="css/tablets.css" />
 
 	<!-- Thinner screens -->
-	<link rel="stylesheet" media="screen and (min-width : 800px) and (max-width : 1366px)" type="text/css" href="css/smaller-screens.css" />
-	<link rel="stylesheet" media="screen and (min-device-width : 800px) and (max-device-width : 1224px)" type="text/css" href="css/smaller-screens.css" />
+	<link rel="stylesheet" media="screen and (min-width : 834px) and (max-width : 1366px)" type="text/css" href="css/smaller-screens.css" />
+	<link rel="stylesheet" media="screen and (min-device-width : 834px) and (max-device-width : 1224px)" type="text/css" href="css/smaller-screens.css" />
 
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
@@ -41,17 +41,20 @@
 	<section id="splash">
 		<div class="container notop">
 			<ul id="nav">
-				<li id="li-logo"><img src="img/logo.png" alt="" id="logo"/></li>
-				<li><a href="#splash">Home</a></li>
-				<li><a href="#mission">Our Mission</a></li>			
-				<li><a href="#faq">FAQ</a></li>
-				<li><a href="#what-we-do">What We Do</a></li>
-				<li><a href="#press">Press</a></li>
-				<li><a href="#team">Team</a></li>
-				<li><a href="#calendar">Calendar</a></li>
-				<li><a href="mailto: chintanparikh@gatech.edu">Contact</a></li>
-				<li class="social"><a href="http://twitter.com/startupXchange">L</a></li>
-				<li class="social"><a href="https://www.facebook.com/groups/315395218587873">f</a></li>
+				<li id="li-logo">
+					<img src="img/logo.png" alt="" id="logo"/><br />
+					<span id="expand"><a>Expand</a>	</span>
+				</li>
+				<li class="li-link"><a href="#splash">Home</a></li>
+				<li class="li-link"><a href="#mission">Our Mission</a></li>			
+				<li class="li-link"><a href="#faq">FAQ</a></li>
+				<li class="li-link"><a href="#what-we-do">What We Do</a></li>
+				<li class="li-link"><a href="#press">Press</a></li>
+				<li class="li-link"><a href="#team">Team</a></li>
+				<li class="li-link"><a href="#calendar">Calendar</a></li>
+				<li class="li-link"><a href="mailto: chintanparikh@gatech.edu">Contact</a></li>
+				<li class="li-link social"><a href="http://twitter.com/startupXchange">L</a></li>
+				<li class="li-link social" style="float:"><a href="https://www.facebook.com/groups/315395218587873">f</a></li>
 			</ul>
 			
 			<header>
@@ -87,13 +90,12 @@
 
 	<section id="mailing-list">
 		<div class="container">
-				<h2>Join the mailing list</h2>
+				<h2>Mailing list</h2>
 				<!-- Begin MailChimp Signup Form -->
 				<form action="http://gatech.us5.list-manage2.com/subscribe/post?u=792e5a329ed7437ad903bc8a8&amp;id=5c64af8d82" method="post" id="email-mobile" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<input type="email" placeholder="Enter your email and press enter" name="EMAIL" class="required email" title="Press enter to join our mailing list" id="mce-EMAIL" autocomplete="off"> <br />
 					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe"></div>
 				</form>
-
 			<!--End mc_embed_signup-->
 		</div>
 		
@@ -129,7 +131,7 @@
 	<section id="what-we-do">
 		<div class="whatwedo-container">
 			<h2>What we do</h2>
-				<div id="whatwedo-grid" class="" style="width: 900px;">
+				<div id="whatwedo-grid" class="" style="">
 				     <div class="whatwedo-image">
 				        <a href="http://startupsemester.gatech.edu"><img src="img/startupsemesterpreview.png" class="hoverswitch" data-switch="img/startupsemesterhover.png" /></a>
 					
@@ -174,7 +176,7 @@
 	</section>
 
 	<section id="team">
-		<div class="container">
+		<div class="whatwedo-container">
 			<h2>Our team</h2>
 			<div class="team-wrapper">
 				<div class="team-member">
