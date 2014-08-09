@@ -5,7 +5,13 @@ $(document).ready(function(){
   $("#expand").click(function () {
     $('.li-link').each(function(i, e) {
       $(e).toggleClass('show');
-    })
+    });
+  })
+
+  $('.li-link').click(function () {
+    $('.li-link').each(function(i, e) {
+      $(e).toggleClass('show');
+    });
   })
 
   $('body').plusAnchor();
