@@ -1,18 +1,26 @@
 $(document).ready(function(){
 
-
   // Mobile Nav
   $("#expand").click(function () {
     $('.li-link').each(function(i, e) {
       $(e).toggleClass('show');
     });
-  })
+
+    if ( $("#expand").text() == "Expand" ) {
+      $("#expand").text("Close");
+    }
+    else {
+      $("#expand").text("Expand");
+    }
+
+  });
 
   $('.li-link').click(function () {
     $('.li-link').each(function(i, e) {
       $(e).toggleClass('show');
     });
-  })
+    $("#expand").text("Expand");
+  });
 
   $('body').plusAnchor();
 
